@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project demonstrates the implementation of a complete Text Preprocessing pipeline using Python. The objective is to clean and transform raw text into a structured format suitable for Natural Language Processing (NLP) and Machine Learning applications.
+This project demonstrates the implementation of a complete **Text Preprocessing** pipeline using Python. The objective is to clean and transform raw text into a structured format suitable for Natural Language Processing (NLP) and Machine Learning applications.
 
-The preprocessing steps are implemented sequentially to improve the quality of textual data before it is used for analysis or model training.
+The project performs multiple preprocessing operations such as lowercasing, tokenization, removal of URLs, numbers, punctuation, emojis, stop words, stemming, and lemmatization to produce clean and meaningful text.
 
 ---
 
@@ -24,7 +24,7 @@ The preprocessing steps are implemented sequentially to improve the quality of t
 - Apply stemming.
 - Apply lemmatization.
 - Generate the final cleaned text.
-- Save the processed text into a new file.
+- Save the cleaned text into a text file.
 
 ---
 
@@ -40,30 +40,30 @@ The preprocessing steps are implemented sequentially to improve the quality of t
 ## Project Structure
 
 ```
-Text-Preprocessing-From-Scratch
+Text-Preprocessing-From-Scratch/
 │
 ├── Raw Text.txt
 ├── Cleaned_Text.txt
 ├── Text_Preprocessing.ipynb
-└── README.md
+├── README.md
 ```
 
 ---
 
 ## Dataset
 
-The project uses a custom text dataset containing real-world notifications and messages such as:
+The project uses a custom text dataset consisting of real-world notifications and messages such as:
 
 - Traffic alerts
 - Library reminders
 - Emergency updates
-- Flight information
+- Flight notifications
 - Community events
 - Weather warnings
-- Smart parking notifications
+- Smart parking messages
 - Fitness tracker reports
 
-The dataset also contains:
+The dataset contains:
 
 - Uppercase and lowercase letters
 - Numbers
@@ -72,55 +72,95 @@ The dataset also contains:
 - Punctuation
 - Special characters
 
-These features make it suitable for demonstrating text preprocessing techniques.
+This makes it suitable for demonstrating various text preprocessing techniques.
 
 ---
 
-## Text Preprocessing Pipeline
+# Text Preprocessing Pipeline
 
+```text
+                Raw Text
+                    │
+                    ▼
+        Convert to Lowercase
+                    │
+                    ▼
+       Sentence Tokenization
+                    │
+                    ▼
+         Word Tokenization
+                    │
+                    ▼
+             Remove URLs
+                    │
+                    ▼
+         Remove Email Addresses
+                    │
+                    ▼
+            Remove Emojis
+                    │
+                    ▼
+            Remove Numbers
+                    │
+                    ▼
+         Remove Punctuation
+                    │
+                    ▼
+         Remove Extra Spaces
+                    │
+                    ▼
+         Remove Stop Words
+                    │
+                    ▼
+              Stemming
+                    │
+                    ▼
+            Lemmatization
+                    │
+                    ▼
+            Final Clean Text
 ```
-Raw Text
-      ↓
-Lowercase Conversion
-      ↓
-Sentence Tokenization
-      ↓
-Word Tokenization
-      ↓
-Remove URLs
-      ↓
-Remove Email Addresses
-      ↓
-Remove Emojis
-      ↓
-Remove Numbers
-      ↓
-Remove Punctuation
-      ↓
-Remove Extra Spaces
-      ↓
-Remove Stop Words
-      ↓
-Stemming
-      ↓
-Lemmatization
-      ↓
-Final Clean Text
-      ↓
-Save Output
-```
+
+---
+
+# Raw Text vs Cleaned Text
+
+| Raw Text | Cleaned Text |
+|----------|--------------|
+| **Traffic Alert: Heavy congestion detected near Central Bridge. Expected delay: 25 minutes. 🚦** | **traffic alert heavy congestion detected near central bridge expected delay minutes** |
+| **Visit https://studentportal.edu to download your semester marksheet.** | **visit download semester marksheet** |
+| **Your fitness tracker recorded 12,486 steps and burned 542 calories today. Great job! 💪** | **fitness tracker recorded steps burned calories today great job** |
+
+---
+
+# Before vs After Comparison
+
+| Preprocessing Step | Before | After |
+|--------------------|--------|-------|
+| Lowercase | `Traffic Alert` | `traffic alert` |
+| Remove URL | `https://studentportal.edu` | *(removed)* |
+| Remove Numbers | `25 minutes` | `minutes` |
+| Remove Punctuation | `Great job!` | `Great job` |
+| Remove Emoji | `💪` | *(removed)* |
+| Remove Stop Words | `to download your` | `download` |
+| Final Output | `Traffic Alert: Heavy congestion detected near Central Bridge. Expected delay: 25 minutes. 🚦` | `traffic alert heavy congestion detected near central bridge expected delay minutes` |
 
 ---
 
 ## Features
 
 - Reads raw text from a text file.
-- Cleans noisy textual data.
-- Performs sentence and word tokenization.
-- Removes unnecessary symbols and characters.
-- Eliminates common stop words.
-- Applies stemming and lemmatization.
-- Produces a clean text file ready for NLP tasks.
+- Performs lowercase conversion.
+- Performs sentence tokenization.
+- Performs word tokenization.
+- Removes URLs and email addresses.
+- Removes emojis and special characters.
+- Removes numbers and punctuation.
+- Removes extra spaces.
+- Removes stop words.
+- Applies stemming.
+- Applies lemmatization.
+- Generates clean text suitable for NLP applications.
 
 ---
 
@@ -128,6 +168,7 @@ Save Output
 
 The project generates:
 
+- Original text
 - Lowercase text
 - Sentence tokens
 - Word tokens
@@ -150,21 +191,22 @@ Cleaned_Text.txt
 
 ## Applications
 
-This preprocessing pipeline can be used before building:
+This preprocessing pipeline can be used in:
 
 - Sentiment Analysis
 - Text Classification
 - Spam Detection
 - Chatbots
 - Machine Translation
-- Question Answering Systems
+- Information Retrieval
 - Document Classification
-- Information Retrieval Systems
-- Language Models
+- Question Answering Systems
+- Language Modeling
 
 ---
+
 ## Conclusion
 
-This project successfully demonstrates the complete Text Preprocessing pipeline using Python. The raw text is transformed into clean and structured text through various preprocessing techniques, including lowercasing, tokenization, removal of URLs, emails, emojis, numbers, punctuation, extra spaces, stop words, stemming, and lemmatization. The final processed text is suitable for Natural Language Processing (NLP) tasks such as text classification, sentiment analysis, information retrieval, and language modeling. This project provides a strong foundation for building more advanced NLP and machine learning applications.
+This project successfully demonstrates a complete Text Preprocessing pipeline using Python. The raw text is transformed into clean and structured text through techniques such as lowercasing, tokenization, removal of URLs, emojis, numbers, punctuation, stop words, stemming, and lemmatization. The resulting cleaned text is suitable for a wide range of Natural Language Processing (NLP) tasks and serves as a strong foundation for developing advanced text analytics and machine learning applications.
 
 ---
