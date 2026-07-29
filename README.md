@@ -193,19 +193,19 @@ Cleaned_Text.txt
 
 This preprocessing pipeline can be used in:
 
-- 😊 Sentiment Analysis
-- 🏷️ Text Classification
-- 📧 Spam Detection
-- 🤖 Chatbots
-- 🌍 Machine Translation
-- 🔍 Information Retrieval
-- 📂 Document Classification
-- ❓ Question Answering Systems
-- 🧠 Language Modeling
+- Sentiment Analysis
+- Text Classification
+- Spam Detection
+- Chatbots
+- Machine Translation
+- Information Retrieval
+- Document Classification
+- Question Answering Systems
+- Language Modeling
 
 ---
 
-## 🎉 Conclusion
+## ✏️ Conclusion
 
 This project successfully demonstrates a complete **Text Preprocessing** pipeline using Python. The raw text is transformed into clean and structured text through techniques such as lowercasing, tokenization, removal of URLs, emojis, numbers, punctuation, stop words, stemming, and lemmatization. The resulting cleaned text is suitable for a wide range of **Natural Language Processing (NLP)** tasks and provides a strong foundation for building advanced text analytics and machine learning applications.
 
